@@ -10,7 +10,6 @@
     --Very-pale-orange: hsl(33, 100%, 98%);
     font-size: 18px;
     font-weight: 700;
-    text-align: center;
 }
 
 html {
@@ -77,6 +76,7 @@ html {
     border-color: black;
     border-top: 1px solid #f5d8c1;
     margin-top: 1rem;
+    width: 100%;
 }
 
 .my-charts-bars {
@@ -152,9 +152,25 @@ div.days-containers:hover > .bars-column {
 .chart-days, .bar-text {
     font-size: 13px;
     font-weight: 400;
+    text-align: center;
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
+    .app-expenses-chart {
+        width: 100%;
+        min-width: 325px;
     
+}
+
+.my-charts-bars {
+    gap: 3px;
+    transition: .5s;
+}
+
+div.days-containers {
+    width: 35px;
+    transition: .5s;
+}
+
 }
