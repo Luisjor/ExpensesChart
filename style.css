@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Soft-red-hover: hsla(10, 79%, 65%, 0.685);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+html {
+    background-color: var(--Cream);
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.app-expenses-chart {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+
+}
+
+.my-balance-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Soft-red);
+    border-radius: 15px;
+    padding: 2rem;
+    
+}
+
+#balance-amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--Very-pale-orange);
+    font-size: 1.5rem;
+}
+
+#Descriptive-Text {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+}
+
+#my-charts-section {
+    display: grid;
+    grid-template-rows: .5fr 2fr 1fr;
+    align-items: end;
+    background-color: var(--Very-pale-orange);
+    padding: 2rem;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    
+    
+}
+
+.my-chart-totals {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border: 5px;
+    border-color: black;
+    border-top: 1px solid #f5d8c1;
+    margin-top: 1rem;
+}
+
+.my-charts-bars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    font-size: 1rem;
+    height: 100%;
+}
+
+#totals-amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--Very-pale-orange);
+    font-size: 2rem;
+    color: black;
+}
+
+#totals-percentage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    font-size: 1rem;
+}
+
+div.days-containers {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    width: 40px;
+}
+
+.bar-text {
+    color: var(--Very-pale-orange);
+    background-color: var(--Dark-brown);
+    border-radius: 5px;
+    padding: 5px 2px;
+    visibility: hidden;
+    width: 50px;
+    text-align: center;
+        
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: -5px;  
+    margin-bottom: 10px;  
+
+}
+
+div.days-containers:hover > .bars-column {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.bars-column:hover > .bar-text {
+    visibility: visible;
+}
+
+.bars-column {
+    background-color: var(--Soft-red);
+    height: 60%;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.chart-days, .bar-text {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 375px) {
+    
+}
