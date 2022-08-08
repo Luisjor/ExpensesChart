@@ -125,7 +125,7 @@ div.days-containers {
         
     /* Position the tooltip */
     position: absolute;
-    z-index: 1;
+    z-index: 9999;
     bottom: 100%;
     left: -5px;  
     margin-bottom: 10px;  
@@ -171,6 +171,13 @@ div.days-containers:hover > .bars-column {
 div.days-containers {
     width: 35px;
     transition: .5s;
+}
+
+.bar-text {
+    padding: 5px 0px;
+    width: 40px;
+    z-index: 9999;
+    left: -2.5px;
 }
 
 }
